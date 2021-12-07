@@ -5,6 +5,7 @@ import csv
 os.system('/root/cfip/CloudflareST -f /root/cfip/ip.txt -o /root/cfip/result.csv -t 1 -n 500')
 #/root/cfip/是测速程序放置的文件夹，cf测速的项目地址:https://github.com/XIU2/CloudflareSpeedTest
 print('\n\n'+"test end!"+'\n\n')
+#测速完后读取文件，提取最快的ip，变量名为bestip
 with open('/root/cfip/result.csv', 'r',encoding='utf-8') as f:
 	reader = csv.reader(f)
 	result = list(reader)
