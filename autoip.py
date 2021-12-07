@@ -25,5 +25,6 @@ f.close()
 os.system('systemctl restart xray.service')
 #上面命令是指重启加载xray，根据自己实际更改
 os.system("sed -n 80p /root/xray/config.json")
+#80是指行数，打印出json文件第80行，注意，这里是从1开始数，和上面不同
 #这个是展示更改后的ip地址。
 print("finish")
