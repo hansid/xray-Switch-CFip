@@ -17,6 +17,7 @@ json_path = '/root/xray/config.json'
 f = open(json_path,'r+',encoding='utf-8')
 flist = f.readlines()
 flist[79] = '                        "address": "'+bestip+'",\n'
+#上一行是把优选ip组合成json里的字符串，缩进距离按自己文件实际更改。
 #79是指行数，从0开始计数，按实际更改。
 f = open(json_path,'w+',encoding='utf-8')
 f.writelines(flist)
